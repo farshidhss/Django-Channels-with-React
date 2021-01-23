@@ -8,7 +8,7 @@ module.exports = {
           loader: 'babel-loader',
         },
         resolve: {
-          extensions: ['.jsx', '.js'],
+          extensions: ['.jsx', '.js', '.html'],
         },
       },
     ],

@@ -19,9 +19,11 @@ lib64/
 parts/
 sdist/
 var/
+node_modules/
 *.egg-info/
 .installed.cfg
 *.egg
+package-lock.json
 
 # PyInstaller
 #  Usually these files are written by a python script from a template

@@ -1,7 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
-
 function MessageInput(props) {
   const messageInput = useRef(null);
   const { socket } = props;
@@ -42,6 +41,5 @@ function MessageInput(props) {
 MessageInput.propTypes = {
   socket: PropTypes.instanceOf(WebSocket).isRequired,
 };
-
 
 export default MessageInput;

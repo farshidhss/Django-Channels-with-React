@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import moment from 'moment/moment';
 import MessageInput from './MessageInput';
 import Message from './Message';
-
 
 function getSocket() {
   const roomName = window.location.pathname.substr(1);
@@ -11,13 +11,10 @@ function getSocket() {
   }/ws/${
     roomName}`;
 
-  const chatSocket = new WebSocket(
+  return new WebSocket(
     socketPath,
   );
-
-  return chatSocket;
 }
-
 
 class App extends Component {
   constructor(props) {
@@ -29,7 +26,6 @@ class App extends Component {
 
     this.chatSocket = getSocket();
   }
-
 
   componentDidMount() {
     this.chatSocket.onmessage = (e) => {
@@ -63,7 +59,6 @@ class App extends Component {
     );
   }
 }
-
 
 export default App;
 
